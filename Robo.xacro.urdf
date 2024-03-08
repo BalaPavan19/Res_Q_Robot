@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<robot name="Res_Q_bot">
+
+ <!-- Define materials -->
+ <material name="tail_green">
+   <color rgba="0.0 0.5 0.0 1.0"/>
+ </material>
+ <material name="navy_blue">
+   <color rgba="0.0 0.0 0.5 1.0"/>
+ </material>
+ <material name="red">
+   <color rgba="0.5 0.0 0.0 1.0"/>
+ </material>
+ <material name="yellow">
+   <color rgba="1.0 1.0 0.0 1.0"/>
+ </material>
+ <material name="black">
+   <color rgba="0.0 0.0 0.0 1.0"/>
+ </material>
+ <material name="gray">
+   <color rgba="0.5 0.5 0.5 1.0"/>
+ </material>
+ <material name="teal">
+   <color rgba="0.0 0.5 0.5 1.0"/>
+ </material>
+ <material name="white">
+   <color rgba="1.0 1.0 1.0 1.0"/>
+ </material>
+
+  <!-- Base Box -->
+  <link name="base">
+    <visual>
+      <geometry>
+        <box size="1 1 0.2"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- Left front wheel -->
+  <link name="left_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.13"/>
+      </geometry>
+      <material name="black"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </visual>
+  </link>
+
+  <!-- Left middle wheel -->
+  <link name="left_middle_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.13"/>
+      </geometry>
+      <material name="black"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </visual>
+  </link>
+
+
+  <!-- Right front wheel -->
+  <link name="right_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.13"/>
+      </geometry>
+      <material name="black"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </visual>
+  </link>
+
+  <!-- Left rear wheel -->
+  <link name="left_rear_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.13"/>
+      </geometry>
+      <material name="black"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </visual>
+  </link>
+
+  <!-- Right rear wheel -->
+  <link name="right_rear_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.13"/>
+      </geometry>
+      <material name="black"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </visual>
+  </link>
+
+  <!-- Right middle wheel -->
+  <link name="right_middle_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.13"/>
+      </geometry>
+      <material name="black"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </visual>
+  </link>
+
+ <!-- Robotic Arm Base -->
+ <link name="arm_base">
+   <visual>
+     <geometry>
+       <box size="0.3 0.3 0.1"/>
+     </geometry>
+     <material name="black"/>
+   </visual>
+ </link>
+
+ <!-- Robotic Arm Joints -->
+ <link name="arm_joint_1">
+   <visual>
+     <geometry>
+       <cylinder length="0.3" radius="0.1"/>
+     </geometry>
+     <material name="gray"/>
+   </visual>
+ </link>
+
+ <link name="arm_joint_1_sphere">
+   <visual>
+     <geometry>
+       <sphere radius="0.1"/>
+     </geometry>
+     <material name="black"/>
+     <origin xyz="0 0 0.15"/>
+   </visual>
+ </link>
+
+ <link name="arm_joint_2">
+   <visual>
+     <geometry>
+       <cylinder length="0.3" radius="0.1"/>
+     </geometry>
+     <material name="gray"/>
+   </visual>
+ </link>
+
+ <link name="arm_joint_2_sphere">
+   <visual>
+     <geometry>
+       <sphere radius="0.1"/>
+     </geometry>
+     <material name="black"/>
+     <origin xyz="0 0 0.15"/>
+   </visual>
+ </link>
+
+ <link name="arm_joint_3">
+   <visual>
+     <geometry>
+       <cylinder length="0.3" radius="0.1"/>
+     </geometry>
+     <material name="gray"/>
+   </visual>
+ </link>
+
+ <!-- Gripper Finger Links -->
+<link name="gripper_finger_left">
+  <visual>
+    <geometry>
+      <box size="0.05 0.1 0.1"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+</link>
+
+<link name="gripper_finger_right">
+  <visual>
+    <geometry>
+      <box size="0.05 0.1 0.1"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+</link>
+
+<!-- Adjusted Arm End Effector Link -->
+<link name="arm_end_effector">
+  <visual>
+    <geometry>
+      <box size="0.1 0.1 0.1"/>
+    </geometry>
+    <material name="tail_green"/>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.1 0.1 0.1"/>
+    </geometry>
+  </collision>
+</link>
+
+ <!-- Camera -->
+ <link name="camera">
+   <visual>
+     <geometry>
+       <box size="0.1 0.2 0.1"/>
+     </geometry>
+     <material name="yellow"/>
+   </visual>
+ </link>
+
+ <link name="base_left">
+   <visual>
+     <geometry>
+       <box size="1.09 0.1 0.1"/>
+     </geometry>
+     <material name="gray"/>
+   </visual>
+ </link> 
+
+ <link name="base_right">
+   <visual>
+     <geometry>
+       <box size="1.09 0.1 0.1"/>
+     </geometry>
+     <material name="gray"/>
+   </visual>
+ </link>
+
+ <link name="cam_joint">
+   <visual>
+     <geometry>
+       <cylinder length="0.15" radius="0.08"/>
+     </geometry>
+     <material name="gray"/>
+   </visual>
+ </link>
+
+ <!-- Joints -->
+  <!-- Joints -->
+  <joint name="left_front_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <parent link="base_left"/>
+    <child link="left_front_wheel"/>
+    <origin xyz="0.5 0.35 -0.2" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="left_middle_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <parent link="base_left"/>
+    <child link="left_middle_wheel"/>
+    <origin xyz="0.01 0.35 -0.2" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="right_front_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <parent link="base_right"/>
+    <child link="right_front_wheel"/>
+    <origin xyz="0.5 -0.35 -0.2" rpy="0 0 0"/>
+  </joint>
+  
+  <joint name="right_middle_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <parent link="base_right"/>
+    <child link="right_middle_wheel"/>
+    <origin xyz="0.01 -0.35 -0.2" rpy="0 0 0"/>
+  </joint>  
+
+  <joint name="left_rear_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <parent link="base_left"/>
+    <child link="left_rear_wheel"/>
+    <origin xyz="-0.5 0.35 -0.2" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="right_rear_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <parent link="base_right"/>
+    <child link="right_rear_wheel"/>
+    <origin xyz="-0.5 -0.35 -0.2" rpy="0 0 0"/>
+  </joint>
+
+ <joint name="arm_base_joint" type="fixed">
+   <parent link="base"/>
+   <child link="arm_base"/>
+   <origin xyz="0.15 0 0.15"/>
+ </joint>
+
+<joint name="arm_joint_1_joint" type="revolute">
+  <parent link="arm_base"/>
+  <child link="arm_joint_1"/>
+  <origin xyz="0 0 0.25" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit lower="-1.57" upper="1.57" effort="100" velocity="10"/>  <!-- Add joint limits here -->
+</joint>
+
+<joint name="arm_joint_2_joint" type="revolute">
+  <parent link="arm_joint_1"/>
+  <child link="arm_joint_2"/>
+  <origin xyz="0 0 0.35" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+  <limit effort="100.0" lower="-1.57" upper="1.57" velocity="1.0"/>
+</joint>
+
+<joint name="arm_joint_3_joint" type="revolute">
+  <parent link="arm_joint_2"/>
+  <child link="arm_joint_3"/>
+  <origin xyz="0 0 0.35" rpy="0 0 0"/>
+  <axis xyz="1 0 0"/>
+  <limit lower="-1.57" upper="1.57" effort="100" velocity="10"/>  <!-- Add joint limits here -->
+</joint>
+
+<joint name="arm_joint_1_sphere_joint" type="fixed">
+  <parent link="arm_joint_1"/>
+  <child link="arm_joint_1_sphere"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+<joint name="arm_joint_2_sphere_joint" type="fixed">
+  <parent link="arm_joint_2"/>
+  <child link="arm_joint_2_sphere"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+<!-- Modified Arm End Effector Joint with Gripper Fingers -->
+<joint name="arm_end_effector_joint" type="fixed">
+  <parent link="arm_joint_3"/>
+  <child link="arm_end_effector"/>
+  <origin xyz="0 0 0.25"/>
+</joint>
+
+<joint name="gripper_joint_left" type="prismatic">
+  <parent link="arm_end_effector"/>
+  <child link="gripper_finger_left"/>
+  <origin xyz="-0.05 0 0.05"/>
+  <axis xyz="1 0 0"/>
+  <limit lower="-0.046" upper="0.092" effort="100" velocity="10"/>  <!-- Add joint limits here -->
+</joint>
+
+<joint name="gripper_joint_right" type="prismatic">
+  <parent link="arm_end_effector"/>
+  <child link="gripper_finger_right"/>
+  <origin xyz="0.05 0 0.05"/>
+  <axis xyz="1 0 0"/>
+  <limit lower="-0.092" upper="0.046" effort="100" velocity="10"/>  <!-- Add joint limits here -->
+</joint>
+
+ <joint name="camera_joint" type="fixed">
+   <parent link="cam_joint"/>
+   <child link="camera"/>
+   <axis xyz="0 0 1"/>
+   <origin xyz="0.08 0 0.12"/>
+ </joint>
+
+<joint name="cam_joint_joint" type="revolute">
+  <parent link="base"/>
+  <child link="cam_joint"/>
+  <origin xyz="0.5 0 0.15" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="100.0" lower="-1.57" upper="1.57" velocity="1.0"/>
+</joint>
+
+
+ <joint name="base_left_joint" type="fixed">
+   <parent link="base"/>
+   <child link="base_left"/>
+   <axis xyz="0 0 1"/>
+   <origin xyz="0 0.5 -0.15"/>
+ </joint>
+
+ <joint name="base_right_joint" type="fixed">
+   <parent link="base"/>
+   <child link="base_right"/>
+   <axis xyz="0 0 1"/>
+   <origin xyz="0 -0.5 -0.15"/>
+ </joint>
+
+</robot>
